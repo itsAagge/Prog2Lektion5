@@ -5,6 +5,10 @@ public class Opgave03Main {
         if (p == 0) {
             return 1;
         }
-        return power(n, p-1) * n;
+        if (p % 2 == 0) {
+            return power(n * n, p / 2);
+        } else {
+            return power(n, p - 1) * n;
+        }
     }
 }
